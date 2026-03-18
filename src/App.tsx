@@ -6,6 +6,7 @@ import { Home } from "./components/Home"
 import { RSVPForm } from "./components/RSVPform"
 import { Admin } from "./components/Admin"
 import { Login } from "./components/Login"
+import './index.css';
 
 const ALLOWED_EMAILS = import.meta.env.VITE_ADMIN_EMAILS.split(",")
 
@@ -35,10 +36,8 @@ function App() {
           path="/"
           element={
             <>
-              <h1>Welcome to Our Wedding</h1>
               <Home />
               <RSVPForm />
-              {/* <a href="/admin">Admin Login</a> */}
             </>
           }
         />
