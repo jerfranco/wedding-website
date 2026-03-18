@@ -15,8 +15,9 @@ export function Home() {
         our guest list.
       </p>
       <p>
-        Date: June 15, 2026 <br />
-        Location: Beautiful Gardens, City, State
+        Date: August 8, 2026 <br />
+        Sealing: Oakland Temple <br />
+        Location: 2350 Jeffery Way, Brentwood, CA 94513
       </p>
     </section>
   )
