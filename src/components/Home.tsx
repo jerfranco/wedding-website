@@ -3,7 +3,7 @@
 
 export function Home() {
   return (
-    <section style={{ textAlign: "center", padding: "2rem" }}>
+    <section id="home">
       {/* <img
         src={heroImg}
         alt="Wedding Hero"
@@ -16,8 +16,9 @@ export function Home() {
       </p>
       <p>
         Date: August 8, 2026 <br />
-        Sealing: Oakland Temple <br />
-        Location: 2350 Jeffery Way, Brentwood, CA 94513
+        Location: Antioch Stake Center <br />
+        2350 Jeffery Way, Brentwood, CA 94513 <br />
+        4:30pm-7pm
       </p>
     </section>
   )
