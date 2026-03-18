@@ -4,6 +4,7 @@ import { supabase } from "../supabaseClient"
 export function RSVPForm() {
   const [name, setName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
+  const [party, setParty] = useState<string>("");
   const [attending, setAttending] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
@@ -15,7 +16,7 @@ export function RSVPForm() {
 
     const { error } = await supabase
       .from("guests")
-      .insert([{ name, attending, email }])
+      .insert([{ name, attending, email, party}])
 
     if (error) {
       console.error("Error submitting RSVP:", error)
@@ -28,6 +29,7 @@ export function RSVPForm() {
     setAttending(false)
     setLoading(false)
     setEmail("")
+    setParty("")
   }
 
   return (
@@ -44,6 +46,13 @@ export function RSVPForm() {
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Your email"
+        required
+      />
+      <input
+        type="number"
+        value={party}
+        onChange={(e) => setParty(e.target.value)}
+        placeholder="Party Amount"
         required
       />
       <label>
