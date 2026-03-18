@@ -38,7 +38,7 @@ function App() {
               <h1>Welcome to Our Wedding</h1>
               <Home />
               <RSVPForm />
-              <a href="/admin">Admin Login</a>
+              {/* <a href="/admin">Admin Login</a> */}
             </>
           }
         />
