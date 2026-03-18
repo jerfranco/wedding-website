@@ -32,15 +32,13 @@ function App() {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Home />
-              <RSVPForm />
-            </>
-          }
-        />
+        {/* Home page */}
+        <Route path="/" element={<Home />} />
+
+        {/* RSVP page */}
+        <Route path="/rsvp" element={<RSVPForm />} />
+
+        {/* Admin page */}
         <Route
           path="/admin"
           element={
@@ -49,6 +47,8 @@ function App() {
               : <Login onLogin={() => supabase.auth.getUser()} />
           }
         />
+
+        {/* Redirect unknown routes */}
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </Router>

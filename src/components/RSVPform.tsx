@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { supabase } from "../supabaseClient"
+import { useNavigate } from "react-router-dom"
 
 export function RSVPForm() {
   const [name, setName] = useState<string>("")
@@ -9,6 +10,7 @@ export function RSVPForm() {
   const [attending, setAttending] = useState<boolean>(false)
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
+  const navigate = useNavigate()
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -32,10 +34,13 @@ export function RSVPForm() {
     setEmail("")
     setParty("")
     setAllergies("")
+
+    navigate("/", { state: { submitted: true } })
   }
 
   return (
     <section id="forms">
+      <h2>RSVP</h2>
       <form onSubmit={handleSubmit}>
       <input
         type="text"
