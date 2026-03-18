@@ -35,7 +35,8 @@ export function RSVPForm() {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <section id="forms">
+      <form onSubmit={handleSubmit}>
       <input
         type="text"
         value={name}
@@ -72,10 +73,12 @@ export function RSVPForm() {
         />
         Attending
       </label>
-      <button type="submit" disabled={loading}>
+      <button id="submitForm" type="submit" disabled={loading}>
         {loading ? "Submitting..." : "Submit"}
       </button>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
+    </section>
+    
   )
 }
