@@ -9,7 +9,7 @@ export function Home() {
   return (
     <section id="home">
       <h1 className="lavishly-yours-regular">
-        Janelle Rae Teoxon <br /> & <br /> Jeremiah Ariola Franco
+        Janelle Stewart <br /> & <br /> Jeremiah Franco
       </h1>
 
       {submitted && (
