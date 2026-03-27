@@ -34,6 +34,9 @@ export function Home() {
       <button onClick={() => navigate("/rsvp")} id="rsvpbutton">
         RSVP Here
       </button>
+      {/* <button onClick={() => navigate("/registry")} id="registry button">
+        Registry
+      </button> */}
     </section>
   )
 }

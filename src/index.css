@@ -7,6 +7,54 @@ body {
   background-color: lightblue;
 }
 
+
+
+
+/*! NavBar Component  */
+
+
+
+nav {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+}
+
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-self: center;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.active {
+  border-bottom: 1px black solid;
+}
+
+
+
+
+
+
+
+
+/*! Home page */
+
+
+
+
+
 .lavishly-yours-regular {
   font-family: "Lavishly Yours", cursive;
   font-weight: 400;
@@ -28,9 +76,10 @@ body {
   margin-bottom: auto;
 }
 
+
 #forms form {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   flex-wrap: wrap;
   flex-direction: column;
   padding-left: 15%;
@@ -43,6 +92,7 @@ body {
 }
 
 #forms form input {
+  /* justify-self: center; */
   margin-bottom: 1rem;
   padding: 0.5rem 0;
   padding-left: 0.5rem;
@@ -51,6 +101,11 @@ body {
 }
 
 #forms form label {
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+#forms form label:last-of-type {
   text-align: center;
 }
 
@@ -88,6 +143,14 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
+
+
+
+/*! Admin Page */
+
+
+
 
 table {
   width: 100%;
@@ -176,6 +239,16 @@ button:last-child {
   width: 100%;
 }
 
+
+
+
+
+/*! Mobile View  */
+
+
+
+
+
 @media screen and (max-width: 768px) {
   table {
     display: none;
@@ -207,5 +280,19 @@ button:last-child {
 
   #adminButtons {
     margin: 0;
+  }
+
+
+  nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  p {
+    font-size: 20px;
   }
 }

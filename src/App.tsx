@@ -6,6 +6,9 @@ import { Home } from "./components/Home"
 import { RSVPForm } from "./components/RSVPform"
 import { Admin } from "./components/Admin"
 import { Login } from "./components/Login"
+import { Registry } from "./components/Registry"
+import { About } from "./components/About"
+import { NavBar } from "./components/Navbar"
 import './index.css';
 
 const ALLOWED_EMAILS = import.meta.env.VITE_ADMIN_EMAILS.split(",")
@@ -31,6 +34,7 @@ function App() {
 
   return (
     <Router>
+      <NavBar />
       <Routes>
         {/* Home page */}
         <Route path="/" element={<Home />} />
@@ -47,6 +51,10 @@ function App() {
               : <Login onLogin={() => supabase.auth.getUser()} />
           }
         />
+
+        <Route path="/registry" element={<Registry />} />
+
+        <Route path="/about" element={<About />} />
 
         {/* Redirect unknown routes */}
         <Route path="*" element={<Navigate to="/" replace />} />
