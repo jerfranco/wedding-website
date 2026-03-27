@@ -147,6 +147,22 @@ nav ul li a {
 
 
 
+/*! Our Story Page  */
+
+
+
+#storyPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
 /*! Admin Page */
 
 

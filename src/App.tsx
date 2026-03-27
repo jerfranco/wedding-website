@@ -7,7 +7,7 @@ import { RSVPForm } from "./components/RSVPform"
 import { Admin } from "./components/Admin"
 import { Login } from "./components/Login"
 import { Registry } from "./components/Registry"
-import { About } from "./components/About"
+import { Story } from "./components/Story"
 import { NavBar } from "./components/Navbar"
 import './index.css';
 
@@ -54,7 +54,7 @@ function App() {
 
         <Route path="/registry" element={<Registry />} />
 
-        <Route path="/about" element={<About />} />
+        <Route path="/about" element={<Story />} />
 
         {/* Redirect unknown routes */}
         <Route path="*" element={<Navigate to="/" replace />} />

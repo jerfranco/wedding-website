@@ -16,7 +16,7 @@ export function NavBar() {
         </li>
         <li>
           <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>
-            About Us
+            Our Story
           </NavLink>
         </li>
         <li>
