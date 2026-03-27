@@ -42,6 +42,7 @@ export function RSVPForm() {
     <section id="forms">
       <h2>RSVP</h2>
       <form onSubmit={handleSubmit}>
+        <label htmlFor="name">Name:</label>
       <input
         type="text"
         value={name}
@@ -49,6 +50,7 @@ export function RSVPForm() {
         placeholder="Your name"
         required
       />
+      <label htmlFor="email">Email:</label>
       <input
         type="email"
         value={email}
@@ -56,6 +58,7 @@ export function RSVPForm() {
         placeholder="Your email"
         required
       />
+      <label htmlFor="phone">Phone Number:</label>
       <input
         type="number"
         value={party}
@@ -63,6 +66,7 @@ export function RSVPForm() {
         placeholder="Party Amount"
         required
       />
+      <label htmlFor="allergies">Allergies:</label>
       <input
         type="text"
         value={allergies}
