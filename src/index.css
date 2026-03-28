@@ -435,6 +435,9 @@ button {
 
   #inviteSection p {
     font-size: 25px;
+    line-height: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
   }
 
   #homeInfoContent {
@@ -451,7 +454,8 @@ button {
 
 
   nav {
-    grid-template-columns: 25% 1fr 25%; /* keep same structure */
+    grid-template-columns: 25% 1fr 25%;
+    margin-top: 1rem;
   }
 
   nav h1 {
