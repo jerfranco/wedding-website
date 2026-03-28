@@ -11,7 +11,7 @@ export function Home() {
     <section id="homeWrapper">
       <section id="home">
         <div id="homeImg">
-          <img src={image} />
+          {/* <img src={image} /> */}
         </div>
 
         <div id="homeContent">

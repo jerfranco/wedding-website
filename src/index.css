@@ -18,14 +18,38 @@ nav {
   /* margin-left: auto;
   margin-right: auto; */
   /* margin-bottom: 10px; */
+  position: fixed;        /* 👈 makes it float */
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   align-items: center;
+  background-color: white;
+  background: transparent;
+  transition: all 0.3s ease;
+
+}
+
+nav.scrolled {
+  background: white;
+  color: black;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+nav.scrolled ul li a {
+  color: black;
+}
+
+nav.scrolled h1 {
+  color: black;
 }
 
 nav h1 {
   text-align: center;
+  color: white;
 }
 
 
@@ -44,7 +68,8 @@ nav ul li {
 
 nav ul li a {
   text-decoration: none;
-  color: black;
+  /* color: black; */
+  color: white;
 }
 
 .active {
@@ -145,7 +170,10 @@ nav ul li a {
 #home {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  height: calc(100vh - 66.5px);
+  height: calc(100vh);
+  background-image: url('../public/image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #home p {
@@ -226,7 +254,7 @@ nav ul li a {
   /* min-height: 100vh; */
   display: flex;
   flex-direction: column;
-  align-items: center;
+  /* align-items: center; */
 
   text-align: center;
 }
@@ -455,7 +483,7 @@ button {
 
   nav {
     grid-template-columns: 25% 1fr 25%;
-    margin-top: 1rem;
+    /* margin-top: 1rem; */
   }
 
   nav h1 {
@@ -476,7 +504,7 @@ button {
     display: none; /* hidden initially */
     flex-direction: column;
     gap: 0;
-    background-color: lightblue;
+    /* background-color: lightblue; */
     width: 100%;
     text-align: center;
     position: absolute;
