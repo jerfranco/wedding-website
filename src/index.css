@@ -1,9 +1,9 @@
 body {
   margin: 0;
   height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-content: center;
+  /* display: flex; */
+  /* justify-content: center;
+  align-content: center; */
   background-color: lightblue;
 }
 
@@ -15,9 +15,17 @@ body {
 
 
 nav {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 10px;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* margin-bottom: 10px; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+nav h1 {
+  text-align: center;
 }
 
 
@@ -31,6 +39,7 @@ nav ul {
 
 nav ul li {
   padding: 1rem;
+  font-size: 20px;
 }
 
 nav ul li a {
@@ -42,6 +51,9 @@ nav ul li a {
   border-bottom: 1px black solid;
 }
 
+.hamburger {
+  display: none;
+}
 
 
 
@@ -49,7 +61,8 @@ nav ul li a {
 
 
 
-/*! Home page */
+
+
 
 
 
@@ -62,7 +75,7 @@ nav ul li a {
 }
 
 #root {
-  margin-top: auto;
+  /* margin-top: auto; */
   margin-bottom: auto;
   /* padding: 1rem; */
   width: 100%;
@@ -118,31 +131,125 @@ nav ul li a {
   background-color: green;
 }
 
+
+
+
+/*! Home page */
+
+
+
+
+
+
+
 #home {
-  text-align: center;
-  /* padding: 1rem; */
-  margin-top: auto;
-  margin-bottom: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  height: calc(100vh - 66.5px);
 }
 
+#home p {
+  font-size: 35px;
+  line-height: 5rem;
+}
+
+
+#homeImg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+
+#home img {
+  /* width: 100%;
+  height: auto; */
+  width: 800px;
+  height: 800px;
+  /* object-fit: cover; */
+  /* padding-left: 1rem; */
+  box-sizing: border-box;
+  border-radius: 50%;
+}
+
+
 #home h1 {
-  font-size: 45px;
+  font-size: 60px;
 }
 
 #homeInfo {
-  margin-top: 3rem;
+  /* margin-top: 3rem; */
   font-size: 25px;
+  background-color: black;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 55% 45%;
+  align-items: center;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  color: white;
+}
+
+#homeInfoContent {
+  text-align: start;
+  padding-left: 6rem;
+}
+
+#homeInfoContent p {
+  line-height: 3rem;
+}
+
+#homeInfoImg {
+  display: flex;
+  justify-content: center;
+}
+
+#homeInfo img {
+  width: 100%;
+  height: auto;
+  /* object-fit: cover; */
+  padding-left: 1rem;
+  box-sizing: border-box;
+
+}
+
+#homeContent {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#homeWrapper {
+  /* min-height: 100vh; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+#inviteSection p{
+  font-size: 45px;
+  line-height: 4rem;
 }
 
 #rsvpbutton {
   width: 50%;
   padding: 0.5rem 0;
-  border-radius: 10px;
-  border: none;
-  background-color: green;
+  /* border-radius: 10px; */
+  /* border: none; */
+  /* background-color: blue; */
   margin-left: auto;
   margin-right: auto;
+  font-size: 25px;
 }
+/* 
+#rsvpbutton:hover {
+  border-bottom: 1px black solid;
+} */
 
 
 
@@ -205,18 +312,25 @@ button {
   margin: 0 4px;
   padding: 6px 10px;
   border: none;
-  border-radius: 6px;
+  /* border-radius: 6px; */
   cursor: pointer;
 }
 
-button:first-child {
+#round {
+  border-radius: 6px;
   background-color: #4caf50;
   color: white;
 }
 
-button:last-child {
+/* button:first-child {
+  background-color: #4caf50;
+  color: white;
+} */
+
+#red {
   background-color: #e53935;
   color: white;
+  border-radius: 6px;
 }
 
 #adminInfo {
@@ -239,6 +353,18 @@ button:last-child {
   margin-top: 2rem;
 }
 
+
+
+
+
+
+
+/*! Mobile View  */
+
+
+
+
+
 @media screen and (min-width: 1000px) {
   #forms {
     width: 50%;
@@ -257,17 +383,17 @@ button:last-child {
 
 
 
-
-
-/*! Mobile View  */
-
-
-
-
-
 @media screen and (max-width: 768px) {
   table {
     display: none;
+  }
+
+  #home {
+    display: flex;
+    flex-direction: column;
+    /* height: calc(100vh - 66.5px); */
+    height: 100vh;
+    justify-content: center;
   }
 
   .guest-card {
@@ -298,12 +424,97 @@ button:last-child {
     margin: 0;
   }
 
+  #rsvpbutton {
+    font-size: 20px;
+    width: 50%;
+  }
+
+  #homeContent h2 {
+    font-size: 35px;
+  }
+
+  #inviteSection p {
+    font-size: 25px;
+  }
+
+  #homeInfoContent {
+    padding: 2rem;
+  }
+
+  #homeInfoContent h1 {
+    font-size: 35px;
+  }
+
+  #homeInfoContent p {
+    font-size: 20px;
+  }
+
 
   nav {
-    position: fixed;
-    bottom: 0;
-    left: 0;
+    grid-template-columns: 25% 1fr 25%; /* keep same structure */
+  }
+
+  nav h1 {
+    font-size: 22px;
+  }
+
+  .hamburger {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    width: 50%;
+    background-color: transparent;
+  }
+
+  nav ul {
+    display: none; /* hidden initially */
+    flex-direction: column;
+    gap: 0;
+    background-color: lightblue;
     width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    padding: 1rem 0;
+    box-sizing: border-box;
+  }
+
+  nav ul.open {
+    display: flex;
+  }
+
+  nav ul li {
+    margin: 0.5rem 0;
+  }
+
+  #homeImg {
+    padding: 0;
+  }
+
+  #home img {
+    padding: 0;
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  #home h1 {
+    font-size: 40px;
+  }
+
+  #home p {
+    font-size: 25px;
+  }
+
+  #homeInfo {
+    display: block;
+  }
+
+  #homeInfo img {
+    padding: 0;
   }
 }
 

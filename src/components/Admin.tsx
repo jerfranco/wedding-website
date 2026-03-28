@@ -126,10 +126,10 @@ export function Admin() {
                   <td>{guest.party}</td>
                   <td>{guest.attending ? "Yes" : "No"}</td>
                   <td>
-                    <button onClick={() => handleToggleAttending(guest)}>
+                    <button id="round" onClick={() => handleToggleAttending(guest)}>
                       Toggle
                     </button>
-                    <button onClick={() => handleDelete(guest.id)}>
+                    <button id="red" onClick={() => handleDelete(guest.id)}>
                       Delete
                     </button>
                   </td>
@@ -149,10 +149,10 @@ export function Admin() {
                   <p><strong>Attending:</strong> {guest.attending ? "Yes" : "No"}</p>
                 </div>
                 <div className="actions">
-                  <button onClick={() => handleToggleAttending(guest)}>
+                  <button id="round" onClick={() => handleToggleAttending(guest)}>
                     Toggle
                   </button>
-                  <button onClick={() => handleDelete(guest.id)}>
+                  <button id="red" onClick={() => handleDelete(guest.id)}>
                     Delete
                   </button>
                 </div>
@@ -163,8 +163,8 @@ export function Admin() {
   )}
       
       <div id="adminButtons">
-        <button onClick={() => supabase.auth.signOut()}>Log Out</button>
-        <button onClick={() => navigate("/")}>Home Page</button>
+        <button id="round" onClick={() => supabase.auth.signOut()}>Log Out</button>
+        <button id="red" onClick={() => navigate("/")}>Home Page</button>
       </div>
       
     </div>
