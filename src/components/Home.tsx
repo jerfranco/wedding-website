@@ -32,7 +32,7 @@ export function Home() {
       </section>
       <section id="inviteSection">
         <p>
-          You are invited to our special day! <br />Please RSVP above and get ready for some fun!
+          You are invited! <br />Please RSVP above and get ready for some fun!
           <br /> Maraming salamat!
         </p>
       </section>
