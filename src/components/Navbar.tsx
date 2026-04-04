@@ -1,15 +1,23 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate, NavLink } from "react-router-dom";
 
 export function NavBar() {
   const navigate = useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false); // 👈 NEW
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 50);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav>
+    <nav className={scrolled ? "scrolled" : ""}>
       
-
-      {/* Hamburger button */}
       <button
         className="hamburger"
         onClick={() => setMenuOpen(!menuOpen)}
@@ -24,11 +32,6 @@ export function NavBar() {
             Home
           </NavLink>
         </li>
-        {/* <li>
-          <NavLink to="/rsvp" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-            RSVP
-          </NavLink>
-        </li> */}
         <li>
           <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Our Story
@@ -39,8 +42,15 @@ export function NavBar() {
             Registry
           </NavLink>
         </li>
+        <li>
+        <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
+           FAQ
+          </NavLink>
+        </li>
       </ul>
+
       <h1>Janelle & Jeremiah</h1>
+
       <button onClick={() => navigate("/rsvp")} id="rsvpbutton">
         RSVP
       </button>
