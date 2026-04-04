@@ -42,6 +42,11 @@ export function NavBar() {
             Registry
           </NavLink>
         </li>
+        <li>
+        <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
+           FAQ
+          </NavLink>
+        </li>
       </ul>
 
       <h1>Janelle & Jeremiah</h1>
