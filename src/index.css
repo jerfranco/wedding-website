@@ -445,6 +445,38 @@ button {
   padding-top: 3rem;
 }
 
+#questionSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+#questionSection h2 {
+  text-align: center;
+  font-size: 35px;
+}
+
+#questionSection p {
+  font-size: 25px;
+}
+
+#questionSection #questions1 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+#questionSection #questions2 {
+  margin-left: 10rem;
+  margin-right: 10rem;
+}
+
+#questions1 div {
+  height: 150px;
+}
+
+#questions2 div {
+  height: 150px;
+}
+
 
 
 
@@ -620,6 +652,34 @@ button {
 
   #homeInfo img {
     padding: 0;
+  }
+
+  #questionSection {
+    display: block;
+  }
+
+  #questionSection #questions1 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #questionSection #questions2 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  #questions1 div {
+    height: auto;
+  }
+
+  #questions2 div {
+    height: auto;
+  }
+
+  #faqSection h1 {
+    padding-top: 0;
+    margin-top: 50px;
+    margin-bottom: 70px;
   }
 }
 
