@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import image from '../../public/home_image.webp'
+import image from '/home_image.webp'
 
 export function Home() {
 
