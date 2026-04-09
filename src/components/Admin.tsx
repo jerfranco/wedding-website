@@ -7,6 +7,7 @@ interface Guest {
   name: string
   email: string
   attending: boolean
+  allergies: string
   party?: number
 }
 
@@ -114,6 +115,7 @@ export function Admin() {
                 <th>Name</th>
                 <th>Email</th>
                 <th>Party</th>
+                <th>Allergies</th>
                 <th>Attending</th>
                 <th>Actions</th>
               </tr>
@@ -124,6 +126,7 @@ export function Admin() {
                   <td>{guest.name}</td>
                   <td>{guest.email}</td>
                   <td>{guest.party}</td>
+                  <td>{guest.allergies}</td>
                   <td>{guest.attending ? "Yes" : "No"}</td>
                   <td>
                     <button id="round" onClick={() => handleToggleAttending(guest)}>

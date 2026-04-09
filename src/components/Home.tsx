@@ -34,9 +34,9 @@ export function Home() {
       <section id="inviteSection">
         <p>
           You are invited! <br />Please RSVP above and get ready for some fun!
-          <br /> Maraming salamat!
         </p>
-        <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p>
+        {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
+        <p>Maraming salamat!</p>
         <img src={image}></img>
       </section>
       {/* <section id="homeInfo">
