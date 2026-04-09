@@ -27,31 +27,31 @@ export function NavBar() {
       </button>
 
       <ul className={menuOpen ? "open" : ""}>
-        <li>
+        <li className="barlow-regular">
           <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Home
           </NavLink>
         </li>
-        <li>
+        <li className="barlow-regular">
           <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Our Story
           </NavLink>
         </li>
-        <li>
+        <li className="barlow-regular">
           <NavLink to="/registry" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Registry
           </NavLink>
         </li>
-        <li>
+        <li className="barlow-regular">
         <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
            FAQ
           </NavLink>
         </li>
       </ul>
 
-      <h1>Janelle & Jeremiah</h1>
+      <h1 className="bellota-regular">J & J</h1>
 
-      <button onClick={() => navigate("/rsvp")} id="rsvpbutton">
+      <button onClick={() => navigate("/rsvp")} id="rsvpbutton" className="barlow-regular">
         RSVP
       </button>
     </nav>
