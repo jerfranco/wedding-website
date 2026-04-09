@@ -68,7 +68,7 @@ export function RSVPForm() {
             type="number"
             value={party}
             onChange={(e) => setParty(e.target.value)}
-            placeholder="Party Amount - including you"
+            placeholder="Total Party Amount"
             required
           />
           {/* <label htmlFor="allergies">Allergies:</label> */}
