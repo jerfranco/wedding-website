@@ -479,15 +479,46 @@ button {
 }
 
 #amazonLogo {
-  width: 100px;
+  width: 200px;
   background-color: white;
   padding: 2rem;
   border-radius: 10px;
   transition: 0.5s ease;
+  margin: 0;
+  display: block;
 }
 
 #amazonLogo:hover {
-  width: 125px;
+  width: 225px;
+}
+
+#registryLinks {
+  display: flex;
+  gap: 2rem;
+}
+
+#venmo a {
+  width: 263.99px;
+  height: 182.26px;
+  display: flex;
+  margin-left: auto;
+  /* margin-right: auto; */
+  background-color: white;
+  transition: 0.5s ease;
+  border-radius: 10px;
+}
+
+#venmo img {
+  /* width: 50%; */
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#venmo a:hover {
+  width: 288.9px;
+  height: 197.05px;
 }
 
 
@@ -823,6 +854,32 @@ button {
   #submitForm {
     width: 50%;
     padding: 0.5rem
+  }
+  
+  #registryLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  #amazonLogo {
+    width: 100px;
+  }
+
+  #venmo a {
+    width: 164px;
+    height: 123.13px;
+  }
+
+}
+
+@media (hover: none) {
+  #amazonLogo:hover {
+    transform: none;
+  }
+
+  #venmo a:hover {
+    transform: none;
   }
 }
 
