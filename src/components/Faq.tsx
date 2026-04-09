@@ -1,37 +1,63 @@
+import { useState } from "react";
+import image from '/home_image.webp';
+
 export function Faq() {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+
+  const toggle = (index: number) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const faqs = [
+    {
+      question: "What's the wedding dress code?",
+      answer: "Sunday best!",
+    },
+    {
+      question: "Is there parking available?",
+      answer: "There will be parking at the Chapel!",
+    },
+    {
+      question: "What time does the reception start?",
+      answer: "The reception starts at 4:30pm and ends at 7pm",
+    },
+    {
+      question: "Are plus-ones allowed?",
+      answer: "Yes! Make sure you include them in the party amount when RSVP",
+    },
+    {
+      question: "What is the weather like?",
+      answer:
+        "The East Bay will be pretty warm during the summer, so please dress accordingly!",
+    },
+    {
+      question: "What if I have dietary restrictions?",
+      answer:
+        "Please list them on the RSVP. There will be a dedicated section for allergies!",
+    },
+  ];
+
   return (
     <section id="faqSection">
-      <h1>Frequently Asked Questions</h1>
-      <div id="questionSection">
-        <div id="questions1">
-          <div>
-            <h2>What's the wedding dress code?</h2>
-            <p>Dress code</p>
-          </div>
-          <div>
-            <h2>Is there parking?</h2>
-            <p>There will be parking at the Chapel!</p>
-          </div>
-          <div>
-            <h2>What time does the reception start?</h2>
-            <p>The reception starts at 4:30pm and ends at 7pm</p>
-          </div>
-        </div>
-        <div id="questions2">
-          <div>
-            <h2>Are plus-ones allowed?</h2>
-            <p>Yes! Make sure you include them in the party amount when RSVP</p>
-          </div>
-          <div>
-            <h2>What is the weather like?</h2>
-            <p>The East Bay will be pretty warm during the summer, so please dress accordingly!</p>
-          </div>
-          <div>
-            <h2>What if I have dietary restrictions?</h2>
-            <p>Please list them on the RSVP. There will be a dedicated section for allergies!</p>
-          </div>
+      <div id="info">
+        <h1>Frequently Asked Questions</h1>
+
+        <div id="questionSection">
+          {faqs.map((faq, index) => (
+            <div key={index}>
+              <h2 onClick={() => toggle(index)} className="faq-question">
+                {faq.question}
+                <span className={`arrow ${openIndex === index ? "open" : ""}`}>
+                  ▼
+                </span>
+              </h2>
+
+              {openIndex === index && <p>{faq.answer}</p>}
+            </div>
+          ))}
         </div>
       </div>
+      <img src={image} alt="image" />
     </section>
-  )
+  );
 }

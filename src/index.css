@@ -4,7 +4,7 @@ body {
   /* display: flex; */
   /* justify-content: center;
   align-content: center; */
-  background-color: lightblue;
+  background-color: #5bb0d4;
 }
 
 
@@ -113,9 +113,23 @@ nav ul li a {
   flex-direction: column;
 }
 
+
+
+
+/*! RSVP Page  */
+
+
+
+
 #forms {
   margin-top: auto;
   margin-bottom: auto;
+  /* background-color: white; */
+  /* padding: 2rem; */
+}
+
+#forms img {
+  width: 100px;
 }
 
 
@@ -124,22 +138,33 @@ nav ul li a {
   /* justify-content: center; */
   flex-wrap: wrap;
   flex-direction: column;
-  padding-left: 15%;
-  padding-right: 15%;
+  padding: 2rem 5rem;
+  background-color: lightblue;
+  border-radius: 20px;
 }
 
 #forms h2 {
   text-align: center;
   font-size: 50px;
+  margin: 0;
+  color: white;
 }
 
 #forms form input {
   /* justify-self: center; */
   margin-bottom: 1rem;
-  padding: 0.5rem 0;
-  padding-left: 0.5rem;
+  padding: 1rem 0;
+  padding-left: 1rem;
   border-radius: 10px;
-  border: 1px solid black;
+  border: none;
+  width: 75%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#forms form input::placeholder {
+  color: black;
+  font-size: 15px;
 }
 
 #forms form label {
@@ -152,12 +177,16 @@ nav ul li a {
 }
 
 #submitForm {
-  padding: 0.5rem 0;
-  margin-left: 15%;
-  margin-right: 15%;
+  padding: 1rem 0;
+  margin-left: auto;
+  margin-right: auto;
   border-radius: 10px;
   border: none;
-  background-color: green;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  width: 200px;
+  font-size: 20px;
 }
 
 
@@ -308,11 +337,25 @@ nav ul li a {
 
 
 #storyPage {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin-top: 80px;
+  min-height: calc(100vh - 80px);
+}
+
+#storyPage > * {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 80px;
+}
+
+#storyPage img {
+  object-fit: cover;
+  height: 600px;
+  width: 600px;
+  border-radius: 50%;
 }
 
 
@@ -425,8 +468,26 @@ button {
 
 #registry {
   margin-top: 80px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-height: calc(100vh - 80px);
+  background-image: url('../public/home_image.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
+#amazonLogo {
+  width: 100px;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
+
+#amazonLogo:hover {
+  width: 125px;
+}
 
 
 
@@ -437,18 +498,61 @@ button {
 
 #faqSection {
   margin-top: 80px;
+  display: grid;
+  grid-template-columns: 60% 40%;
+  min-height: calc(100vh - 80px);
+}
+
+#faqSection img {
+  display: block;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+#faqSection #info {
+  margin-top: auto;
+  margin-bottom: auto;
 }
 
 #faqSection h1 {
   text-align: center;
   font-size: 50px;
-  padding-top: 3rem;
+  /* padding-top: 3rem; */
+  margin-top: 0;
 }
 
 #questionSection {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+  background-color: lightblue;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
 }
+
+#questionSection div {
+  /* border: 1px black solid; */
+  padding: 0.25rem 2rem;
+}
+
+
+.faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow {
+  display: inline-block;      /* allows transform to work properly */
+  transition: transform 0.3s ease;
+  font-size: 16px;
+}
+
+.arrow.open {
+  transform: rotate(180deg);
+}
+
 
 #questionSection h2 {
   text-align: center;
@@ -457,24 +561,7 @@ button {
 
 #questionSection p {
   font-size: 25px;
-}
-
-#questionSection #questions1 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-#questionSection #questions2 {
-  margin-left: 10rem;
-  margin-right: 10rem;
-}
-
-#questions1 div {
-  height: 150px;
-}
-
-#questions2 div {
-  height: 150px;
+  text-align: center;
 }
 
 
@@ -521,6 +608,7 @@ button {
     /* height: calc(100vh - 66.5px); */
     height: 100vh;
     justify-content: center;
+    background-position: center ;
   }
 
   .guest-card {
@@ -602,7 +690,7 @@ button {
     cursor: pointer;
     width: 50%;
     background-color: transparent;
-    color: white;
+    /* color: white; */
   }
 
   nav ul {
@@ -654,8 +742,14 @@ button {
     padding: 0;
   }
 
+  #home div {
+    background: rgba(0, 0, 0, 0.3);
+    
+  }
+
   #questionSection {
     display: block;
+    width: 85%;
   }
 
   #questionSection #questions1 {
@@ -668,18 +762,54 @@ button {
     margin-right: 2rem;
   }
 
-  #questions1 div {
-    height: auto;
+  #questionSection h2 {
+    font-size: 25px;
   }
 
-  #questions2 div {
-    height: auto;
+  #faqSection {
+    margin-top: 55.47px;
+    display: block;
   }
 
   #faqSection h1 {
     padding-top: 0;
     margin-top: 50px;
     margin-bottom: 70px;
+  }
+
+  #faqSection #info {
+    margin-bottom: 2rem;
+  }
+
+  #storyPage {
+    display: block;
+    margin-top: 55.47px;
+  }
+
+  #storyPage > * {
+    display: block;
+    align-items: normal;
+  }
+
+  #storyPage img {
+    width: 100%;
+    border-radius: 0; 
+    object-fit: cover;
+    height: 50%;
+
+    /* width: 200px;
+    height: 200px; */
+  }
+
+  #storyInfo {
+    text-align: center;
+  }
+
+  #registry {
+    margin-top: 55.47px;
+    background-size: cover;
+    background-position: center;
+    min-height: calc(100vh - 55.47px);
   }
 }
 
