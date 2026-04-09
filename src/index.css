@@ -148,6 +148,7 @@ nav ul li a {
   font-size: 50px;
   margin: 0;
   color: white;
+  margin-bottom: 2rem;
 }
 
 #forms form input {
