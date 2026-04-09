@@ -1,4 +1,5 @@
 import amazon from '/amazon-logo.png'
+import venmo from '/venmo.jpg';
 
 export function Registry() {
   return (
@@ -10,6 +11,10 @@ export function Registry() {
       </p>
       <div id="registryLinks">
         <a href="https://www.amazon.com/wedding/share/jeremiahandjanelle" target="blank"><img  id="amazonLogo" src={amazon} alt="amazon-logo" /></a>
+        <div id="venmo">
+          <a href="https://venmo.com/u/jerfranco" target="blank"><img src={venmo} alt="venmo qr code" /></a>
+        </div>
+        
       </div>
     </div>
   )
