@@ -35,6 +35,10 @@ export function Faq() {
       answer:
         "Please list them on the RSVP. There will be a dedicated section for allergies!",
     },
+    {
+      question: "Is it okay to take pictures?",
+      answer: "Yes, but please be mindful of the photographers and other guests."
+    },
   ];
 
   return (
