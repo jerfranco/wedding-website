@@ -488,10 +488,6 @@ button {
   display: block;
 }
 
-#amazonLogo:hover {
-  width: 225px;
-}
-
 #registryLinks {
   display: flex;
   gap: 2rem;
@@ -516,10 +512,6 @@ button {
   display: block;
 }
 
-#venmo a:hover {
-  width: 288.9px;
-  height: 197.05px;
-}
 
 
 
@@ -873,13 +865,14 @@ button {
 
 }
 
-@media (hover: none) {
+@media (hover: hover) {
   #amazonLogo:hover {
-    transform: none;
+    width: 225px;
   }
 
   #venmo a:hover {
-    transform: none;
+    width: 288.9px;
+    height: 197.05px;
   }
 }
 
