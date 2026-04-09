@@ -87,14 +87,28 @@ nav ul li a {
 
 
 
+/*! Fonts */
 
 
 
+.great-vibes-regular {
+  font-family: "Great Vibes", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.bellota-regular {
+  font-family: "Bellota", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
-
-
-
+.barlow-regular {
+  font-family: "Barlow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
 
 
 .lavishly-yours-regular {
@@ -224,8 +238,21 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding-left: 2rem;
   padding-right: 2rem;
+  /* gap: 2rem; */
+}
+
+#homeImg h1 {
+  margin: 0;
+  height: 80px;
+  font-size: 45px;
+}
+
+#homeImg p {
+  margin: 0;
+  color: white;
 }
 
 
@@ -303,8 +330,14 @@ nav ul li a {
 }
 
 #inviteSection p{
-  font-size: 45px;
+  font-size: 35px;
   line-height: 4rem;
+  margin-top: 5rem;
+}
+
+#inviteSection p:nth-child(2) {
+  font-size: 48px;
+  margin-bottom: 5rem;
 }
 
 #inviteSection img {
@@ -478,9 +511,13 @@ button {
   background-size: cover;
 }
 
+#registry h1 {
+  font-size: 48px;
+}
+
 #amazonLogo {
   width: 200px;
-  background-color: white;
+  /* background-color: white; */
   padding: 2rem;
   border-radius: 10px;
   transition: 0.5s ease;
@@ -490,7 +527,14 @@ button {
 
 #registryLinks {
   display: flex;
-  gap: 2rem;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #5bb0d4;
+  width: 75%;
+  height: 60%;
+  margin-top: auto;
+  margin-bottom: auto;
+  border-radius: 20px;
 }
 
 #venmo a {
@@ -499,7 +543,7 @@ button {
   display: flex;
   margin-left: auto;
   /* margin-right: auto; */
-  background-color: white;
+  /* background-color: white; */
   transition: 0.5s ease;
   border-radius: 10px;
 }

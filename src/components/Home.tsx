@@ -12,14 +12,16 @@ export function Home() {
       <section id="home">
         <div id="homeImg">
           {/* <img src={image} /> */}
-          <h1>August 8th, 2026</h1>
+          <h1 className="bellota-regular">August 8th, 2026</h1>
+          <p className="barlow-regular">Sealing - Oakland</p>
+          <p className="barlow-regular">Reception - Brentwood </p>
         </div>
 
         <div id="homeContent">
           {/* <h2>
             August 8, 2026
           </h2> */}
-          <h1 className="lavishly-yours-regular">
+          <h1 className="great-vibes-regular">
             Janelle Stewart <br /> & <br /> Jeremiah Franco
           </h1>
           
@@ -32,11 +34,12 @@ export function Home() {
         </div>
       </section>
       <section id="inviteSection">
-        <p>
-          You are invited! <br />Please RSVP above and get ready for some fun!
+        <p className="barlow-regular">
+        You are invited to the wedding of Janelle & Jeremiah Franco<br />
+        <strong>Please RSVP by July 1st</strong> and get ready for some fun!
         </p>
         {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
-        <p>Maraming salamat!</p>
+        <p id="salamat" className="great-vibes-regular">Maraming salamat!</p>
         <img src={image}></img>
       </section>
       {/* <section id="homeInfo">
