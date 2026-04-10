@@ -12,7 +12,7 @@ export function Home() {
       <section id="home">
         <div id="homeImg">
           {/* <img src={image} /> */}
-          <h1 className="bellota-regular">August 8th, 2026</h1>
+          <h2 className="bellota-regular">August 8th, 2026</h2>
           <p className="barlow-regular">Sealing - Oakland</p>
           <p className="barlow-regular">Reception - Brentwood </p>
         </div>

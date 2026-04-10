@@ -44,7 +44,7 @@ export function Faq() {
   return (
     <section id="faqSection">
       <div id="info">
-        <h1>Frequently Asked Questions</h1>
+        <h1 className="bellota-regular">Frequently Asked Questions</h1>
 
         <div id="questionSection">
           {faqs.map((faq, index) => (
@@ -56,7 +56,7 @@ export function Faq() {
                 </span>
               </h2>
 
-              {openIndex === index && <p>{faq.answer}</p>}
+              {openIndex === index && <p className="barlow-regular">{faq.answer}</p>}
             </div>
           ))}
         </div>
