@@ -521,6 +521,7 @@ button {
   background-image: url('../public/home_image.webp');
   background-repeat: no-repeat;
   background-size: cover;
+  padding: 2rem 0;
 }
 
 #registry h1 {
