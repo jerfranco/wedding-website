@@ -525,6 +525,7 @@ button {
 
 #registry h1 {
   font-size: 48px;
+  padding-top: 2rem;
 }
 
 #amazonLogo {
@@ -631,6 +632,7 @@ button {
 #faqSection #info {
   margin-top: auto;
   margin-bottom: auto;
+  padding: 4rem 0;
 }
 
 #faqSection h1 {
@@ -642,7 +644,7 @@ button {
 
 #questionSection {
   background-color: lightblue;
-  width: 50%;
+  width: 75%;
   margin-left: auto;
   margin-right: auto;
   border-radius: 20px;
@@ -904,6 +906,7 @@ button {
 
   #faqSection #info {
     margin-bottom: 2rem;
+    padding-top: 0;
   }
 
   #storyPage {
