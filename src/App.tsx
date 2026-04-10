@@ -10,6 +10,7 @@ import { Registry } from "./components/Registry"
 import { Story } from "./components/Story"
 import { NavBar } from "./components/Navbar"
 import { Faq } from "./components/Faq"
+import { Sealing } from "./components/Sealing"
 import './index.css';
 
 const ALLOWED_EMAILS = import.meta.env.VITE_ADMIN_EMAILS.split(",")
@@ -58,6 +59,8 @@ function App() {
         <Route path="/about" element={<Story />} />
 
         <Route path="/faq" element={<Faq />} />
+
+        <Route path="/sealing" element={<Sealing />} />
 
         {/* Redirect unknown routes */}
         <Route path="*" element={<Navigate to="/" replace />} />
