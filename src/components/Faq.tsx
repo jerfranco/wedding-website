@@ -1,5 +1,5 @@
 import { useState } from "react";
-import image from '/home_image.webp';
+import image from '/faq_image.webp';
 
 export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
