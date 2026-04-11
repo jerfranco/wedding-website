@@ -1,5 +1,5 @@
 import { useLocation } from "react-router-dom"
-import image from '/home_image.webp'
+import image from '/home_image_mini.webp'
 
 export function Home() {
 
@@ -12,7 +12,7 @@ export function Home() {
       <section id="home">
         <div id="homeImg">
           {/* <img src={image} /> */}
-          <h2 className="bellota-regular">August 8th, 2026</h2>
+          <h2 className="bellota-regular">8 / 8 / 2026</h2>
           <p className="barlow-regular">Sealing - Oakland</p>
           <p className="barlow-regular">Reception - Brentwood </p>
         </div>
@@ -22,7 +22,7 @@ export function Home() {
             August 8, 2026
           </h2> */}
           <h1 className="great-vibes-regular">
-            Janelle Stewart <br /> & <br /> Jeremiah Franco
+            <span id="janelle">Janelle</span><span id="and"><br /> & <br /></span><span id="jeremiah">Jeremiah</span>
           </h1>
           
 
@@ -42,34 +42,6 @@ export function Home() {
         <p id="salamat" className="great-vibes-regular">Maraming salamat!</p>
         <img src={image}></img>
       </section>
-      {/* <section id="homeInfo">
-        <div id="homeInfoContent">
-          <h1>
-            Where is the reception?
-          </h1>
-          <p>
-            <strong>Date:</strong> August 8, 2026 <br />
-            <strong>Location:</strong> Antioch Stake Center -
-            2350 Jeffery Way, Brentwood, CA 94513 <br />
-            <strong>Time: </strong>Seated by 4:30pm
-          </p>
-          <h1>
-            What if I have a severe food allergy?
-          </h1>
-          <p>
-            Let us know when you RSVP!
-          </p>
-          <h1>
-            Can I bring a date or a friend?
-          </h1>
-          <p>
-            We would love to have your friends and family come. Please input the party amount when you RSVP
-          </p>
-        </div>
-        <div id="homeInfoImg">
-          <img src={image}></img>
-        </div>
-      </section> */}
     </section>
   )
 }
