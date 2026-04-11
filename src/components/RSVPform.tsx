@@ -41,7 +41,7 @@ export function RSVPForm() {
 
   return (
     <section id="forms">
-      <h2>RSVP</h2>
+      <h2 className="bellota-regular">RSVP</h2>
       {/* <div>
         <img src={image} alt="image" />
       </div> */}
