@@ -1,5 +1,4 @@
 import { useState } from "react";
-import image from '/faq_image.webp';
 
 export function Faq() {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -61,7 +60,7 @@ export function Faq() {
           ))}
         </div>
       </div>
-      <img src={image} alt="image" />
+      {/* <img src={image} alt="image" /> */}
     </section>
   );
 }
