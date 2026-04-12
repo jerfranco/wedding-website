@@ -9,6 +9,18 @@ export function Faq() {
 
   const faqs = [
     {
+      question: "Where is the reception?",
+      answer: (
+        <a 
+          href="https://www.google.com/maps?q=2350+Jeffery+Way+Brentwood+CA+94513"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          2350 Jeffery Way Brentwood, CA 94513
+        </a>
+      )
+    },
+    {
       question: "What's the wedding dress code?",
       answer: "Sunday best!",
     },
