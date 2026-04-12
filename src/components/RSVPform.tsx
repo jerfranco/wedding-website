@@ -40,60 +40,67 @@ export function RSVPForm() {
   }
 
   return (
-    <section id="forms">
-      <h2 className="bellota-regular">RSVP</h2>
-      {/* <div>
-        <img src={image} alt="image" />
-      </div> */}
-      <div>
-        <form onSubmit={handleSubmit}>
-            {/* <label htmlFor="name">Name:</label> */}
-          <input
-            type="text"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            placeholder="Your name"
-            required
-          />
-          {/* <label htmlFor="email">Email:</label> */}
-          <input
-            type="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            placeholder="Your email"
-            required
-          />
-          {/* <label htmlFor="phone">Phone Number:</label> */}
-          <input
-            type="number"
-            value={party}
-            onChange={(e) => setParty(e.target.value)}
-            placeholder="Total party amount"
-            required
-          />
-          {/* <label htmlFor="allergies">Allergies:</label> */}
-          <input
-            type="text"
-            value={allergies}
-            onChange={(e) => setAllergies(e.target.value)}
-            placeholder="Any allergies?"
-            required
-          />
-          {/* <label>
+    <section id="rsvpSection">
+      <div id="forms">
+        <h2 className="bellota-regular">RSVP</h2>
+        {/* <div>
+          <img src={image} alt="image" />
+        </div> */}
+        <div>
+          <form onSubmit={handleSubmit}>
+              {/* <label htmlFor="name">Name:</label> */}
             <input
-              type="checkbox"
-              checked={attending}
-              onChange={(e) => setAttending(e.target.checked)}
+              className="barlow-regular"
+              type="text"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              placeholder="Your name"
+              required
             />
-            Attending
-          </label> */}
-          <button id="submitForm" type="submit" disabled={loading}>
-            {loading ? "Submitting..." : "Submit"}
-          </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
-        </form>
+            {/* <label htmlFor="email">Email:</label> */}
+            <input
+              className="barlow-regular"
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Your email"
+              required
+            />
+            {/* <label htmlFor="phone">Phone Number:</label> */}
+            <input
+              className="barlow-regular"
+              type="number"
+              value={party}
+              onChange={(e) => setParty(e.target.value)}
+              placeholder="Total party amount"
+              required
+            />
+            {/* <label htmlFor="allergies">Allergies:</label> */}
+            <input
+              className="barlow-regular"
+              type="text"
+              value={allergies}
+              onChange={(e) => setAllergies(e.target.value)}
+              placeholder="Any allergies?"
+              required
+            />
+            {/* <label>
+              <input
+                type="checkbox"
+                checked={attending}
+                onChange={(e) => setAttending(e.target.checked)}
+              />
+              Attending
+            </label> */}
+            <button className="bellota-regular" id="submitForm" type="submit" disabled={loading}>
+              {loading ? "Submitting..." : "Submit"}
+            </button>
+            {error && <p style={{ color: "red" }}>{error}</p>}
+          </form>
+        </div>
       </div>
     </section>
+    
     
   )
 }

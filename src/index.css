@@ -140,9 +140,22 @@ nav ul li a {
 
 
 
+
+#rsvpSection {
+  min-height: calc(100vh - 80px);
+  margin-top: 80px;
+  background-image: url('rsvp-image.webp');
+  background-size: cover;
+  background-position: 30% 75%;
+  background-repeat: no-repeat;
+}
+
+
 #forms {
   margin-top: auto;
   margin-bottom: auto;
+  margin-top: 5rem;
+  width: 100%;
   /* background-color: white; */
   /* padding: 2rem; */
   /* background-image: url(''); */
@@ -159,7 +172,7 @@ nav ul li a {
   flex-wrap: wrap;
   flex-direction: column;
   padding: 2rem 5rem;
-  background-color: lightblue;
+  /* background-color: lightblue; */
   border-radius: 20px;
 }
 
@@ -181,11 +194,13 @@ nav ul li a {
   width: 75%;
   margin-left: auto;
   margin-right: auto;
+  font-size: 20px;
+  display: block;
 }
 
 #forms form input::placeholder {
   color: black;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 #forms form label {
@@ -203,8 +218,8 @@ nav ul li a {
   margin-right: auto;
   border-radius: 10px;
   border: none;
-  background-color: white;
-  color: black;
+  background-color: #95c0d1;
+  color: white;
   font-weight: bold;
   width: 200px;
   font-size: 20px;
@@ -387,14 +402,16 @@ nav ul li a {
 }
 
 #rsvpbutton {
-  width: 50%;
+  width: 100px;
   padding: 0.5rem 0;
-  /* border-radius: 10px; */
+  border-radius: 10px;
   /* border: none; */
   /* background-color: blue; */
   margin-left: auto;
-  margin-right: auto;
-  font-size: 25px;
+  margin-right: 3rem;
+  font-size: 30px;
+  background-color: #95c0d1;
+  color: white;
 }
 /* 
 #rsvpbutton:hover {
@@ -794,10 +811,6 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
-
-  #rsvpbutton {
-    width: 25%;
-  }
 }
 
 #mobileCards {
@@ -850,7 +863,10 @@ button {
 
   #rsvpbutton {
     font-size: 20px;
-    width: 50%;
+    width: 75%;
+    margin: 0;
+    margin-left: auto;
+    margin-right: 1rem;
   }
 
   #homeContent {
@@ -1070,6 +1086,18 @@ button {
   #registry h1 {
     font-size: 60px;
     padding-top: 2rem;
+  }
+
+  #rsvpSection {
+    margin-top: 55.47px;
+    background-position: 15%;
+    min-height: calc(100vh - 55.47px);
+    padding: 0;
+  }
+
+  #forms {
+    padding: 0;
+    margin-top: 2rem;
   }
 
   #forms form {
