@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { supabase } from "../supabaseClient"
 import { useNavigate } from "react-router-dom"
+import { useLocation } from "react-router-dom"
 // import image from '/home_image.webp';
 
 export function RSVPForm() {
@@ -12,6 +13,9 @@ export function RSVPForm() {
   const [loading, setLoading] = useState<boolean>(false)
   const [error, setError] = useState<string | null>(null)
   const navigate = useNavigate()
+
+  const location = useLocation()
+  const submitted = location.state?.submitted
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -36,7 +40,7 @@ export function RSVPForm() {
     setParty("")
     setAllergies("")
 
-    navigate("/", { state: { submitted: true } })
+    navigate("/rsvp", { state: { submitted: true } })
   }
 
   return (
@@ -96,6 +100,11 @@ export function RSVPForm() {
               {loading ? "Submitting..." : "Submit"}
             </button>
             {error && <p style={{ color: "red" }}>{error}</p>}
+            {submitted && (
+              <p className="barlow-regular" id="submitted">
+                Your RSVP has been submitted successfully!
+              </p>
+            )}
           </form>
         </div>
       </div>
