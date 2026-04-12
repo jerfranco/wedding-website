@@ -13,10 +13,10 @@ export function Registry() {
         </p>
         <div id="registryLinks">
           <div id="amazonLogo">
-            <a href="https://www.amazon.com/wedding/share/jeremiahandjanelle" target="blank"><img src={amazon} alt="amazon-logo" /></a>
+            <a href="https://www.amazon.com/wedding/share/jeremiahandjanelle" target="_blank"><img src={amazon} alt="amazon-logo" /></a>
           </div>
           <div id="venmo">
-            <a href="https://venmo.com/u/jerfranco" target="blank"><img src={venmo} alt="venmo qr code" /></a>
+            <a href="https://venmo.com/u/jerfranco" target="_blank"><img src={venmo} alt="venmo qr code" /></a>
           </div>
           
         </div>

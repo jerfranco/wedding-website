@@ -16,6 +16,9 @@ export function Sealing() {
           Regardless if you go in or stay outside, we would love to include you in pictures 
           after the sealing. The sealing may take anytime between an hour to an hour and a half.
         </p>
+        <p className="barlow-regular">
+          <strong>Please let us know if you are not able to make it!</strong>
+        </p>
       </div>
       
     </section>
