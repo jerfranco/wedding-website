@@ -144,7 +144,7 @@ nav ul li a {
 #rsvpSection {
   min-height: calc(100vh - 80px);
   margin-top: 80px;
-  background-image: url('rsvp-image.webp');
+  background-image: url('/rsvp-image.webp');
   background-size: cover;
   background-position: 30% 75%;
   background-repeat: no-repeat;
