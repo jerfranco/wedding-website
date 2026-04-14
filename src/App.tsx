@@ -36,35 +36,39 @@ function App() {
 
   return (
     <Router>
-      <NavBar />
-      <Routes>
-        {/* Home page */}
-        <Route path="/" element={<Home />} />
+      <header>
+        <NavBar />
+      </header>
+      <main>
+        <Routes>
+          {/* Home page */}
+          <Route path="/" element={<Home />} />
 
-        {/* RSVP page */}
-        <Route path="/rsvp" element={<RSVPForm />} />
+          {/* RSVP page */}
+          <Route path="/rsvp" element={<RSVPForm />} />
 
-        {/* Admin page */}
-        <Route
-          path="/admin"
-          element={
-            user && ALLOWED_EMAILS.includes(user.email)
-              ? <Admin />
-              : <Login onLogin={() => supabase.auth.getUser()} />
-          }
-        />
+          {/* Admin page */}
+          <Route
+            path="/admin"
+            element={
+              user && ALLOWED_EMAILS.includes(user.email)
+                ? <Admin />
+                : <Login onLogin={() => supabase.auth.getUser()} />
+            }
+          />
 
-        <Route path="/registry" element={<Registry />} />
+          <Route path="/registry" element={<Registry />} />
 
-        <Route path="/about" element={<Story />} />
+          <Route path="/about" element={<Story />} />
 
-        <Route path="/faq" element={<Faq />} />
+          <Route path="/faq" element={<Faq />} />
 
-        <Route path="/sealing" element={<Sealing />} />
+          <Route path="/sealing" element={<Sealing />} />
 
-        {/* Redirect unknown routes */}
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+          {/* Redirect unknown routes */}
+          <Route path="*" element={<Navigate to="/" replace />} />
+        </Routes>
+      </main>
     </Router>
   )
 }
