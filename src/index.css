@@ -219,7 +219,7 @@ nav ul li a {
   border-radius: 10px;
   border: none;
   background-color: #95c0d1;
-  color: white;
+  color: black;
   font-weight: bold;
   width: 200px;
   font-size: 20px;
@@ -420,7 +420,7 @@ nav ul li a {
   margin-right: 3rem;
   font-size: 30px;
   background-color: #95c0d1;
-  color: white;
+  color: black;
 }
 /* 
 #rsvpbutton:hover {
