@@ -33,8 +33,13 @@ export function NavBar() {
           </NavLink>
         </li>
         <li className="barlow-regular">
-          <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
+          <NavLink to="/story" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Our Story
+          </NavLink>
+        </li>
+        <li className="barlow-regular">
+          <NavLink to="/photos" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
+            Photos
           </NavLink>
         </li>
         <li className="barlow-regular">
@@ -44,7 +49,7 @@ export function NavBar() {
         </li>
         <li className="barlow-regular">
         <NavLink to="/faq" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-           FAQ
+            FAQ
           </NavLink>
         </li>
       </ul>
