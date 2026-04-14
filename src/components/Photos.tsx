@@ -1,13 +1,17 @@
 import { useState } from "react";
 
 const images = [
-  { src: "/home_image_jj.webp"},
-  { src: "/home_image_mini.webp", position: "center 40%" },
-  { src: "/faq_image.webp", position: "center 40%" },
   { src: "/propose.webp", position: "center 50%" },
   { src: "/kneel.webp", position: "center 40%" },
   { src: "/show_ring.webp", position: "center 35%" },
-  { src: "/hop.webp", position: "center 35%" }
+  { src: "/home_image_jj.webp"},
+  { src: "/home_image_mini.webp", position: "center 40%" },
+  { src: "/faq_image.webp", position: "center 40%" },
+  { src: "/hop.webp", position: "center 35%" },
+  { src: "/view.webp"},
+  { src: "/hand.webp", position: "center 30%"},
+  { src: "/walking.webp"},
+  { src: "/look.webp", position: "center 35%"}
 ];
 
 export function Photos() {
