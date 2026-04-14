@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://francowedding.netlify.app/sitemap.xml

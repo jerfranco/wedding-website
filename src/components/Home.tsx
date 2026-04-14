@@ -40,7 +40,7 @@ export function Home() {
         </p>
         {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
         <p id="salamat" className="great-vibes-regular">Maraming salamat!</p>
-        <img src={image}></img>
+        <img src={image} alt="Holding hands"></img>
       </section>
     </section>
   )
