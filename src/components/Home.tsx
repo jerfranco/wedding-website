@@ -37,7 +37,7 @@ export function Home() {
       </section>
       <section id="inviteSection">
         <p className="barlow-regular">
-        You are invited to the wedding of Janelle & Jeremiah Franco<br />
+        You are invited to the wedding of Janelle Stewart & Jeremiah Franco<br />
         <strong>Please RSVP by July 1st</strong> and get ready for some fun!
         </p>
         {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
