@@ -1,5 +1,7 @@
 import { useLocation } from "react-router-dom"
 import image from '/home_image_mini.webp'
+import imageRight from '/flower_right.webp'
+import imageLeft from '/flower_left.webp'
 
 export function Home() {
 
@@ -40,7 +42,12 @@ export function Home() {
         </p>
         {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
         <p id="salamat" className="great-vibes-regular">Maraming salamat!</p>
-        <img src={image} alt="Holding hands"></img>
+        <div id="miniHome">
+          <img src={imageLeft} alt="Flower left side"></img>
+          <img id="homeMiddlePic" src={image} alt="Holding hands"></img>
+          <img src={imageRight} alt="Flower right side"></img>
+        </div>
+        
       </section>
     </section>
   )
