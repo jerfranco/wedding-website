@@ -34,12 +34,12 @@ export function NavBar() {
         </li>
         <li className="barlow-regular">
           <NavLink to="/story" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-            Our Story
+            Story
           </NavLink>
         </li>
         <li className="barlow-regular">
           <NavLink to="/photos" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
-            Photos
+            Gallery
           </NavLink>
         </li>
         <li className="barlow-regular">
@@ -54,7 +54,9 @@ export function NavBar() {
         </li>
       </ul>
 
-      <h1 className="bellota-regular">J & J</h1>
+      <NavLink to="/" className="bellota-regular logo" id="jj">
+        J & J
+      </NavLink>
 
       <button onClick={() => navigate("/rsvp")} id="rsvpbutton" className="barlow-regular">
         RSVP

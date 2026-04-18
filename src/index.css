@@ -33,6 +33,7 @@ nav {
   justify-content: center;
   align-items: center;
   background-color: white;
+  height: 80px;
   /* background: transparent; */
   /* transition: all 0.3s ease; */
 
@@ -56,9 +57,11 @@ nav.scrolled h1 {
   color: black;
 } */
 
-nav h1 {
+#jj {
   text-align: center;
   color: black;
+  font-size: 32px;
+  text-decoration: none;
 }
 
 
@@ -81,7 +84,7 @@ nav ul li a {
   color: black;
 }
 
-.active {
+nav ul li a.active {
   border-bottom: 1px black solid;
 }
 
@@ -1164,11 +1167,12 @@ button {
 
   nav {
     grid-template-columns: 25% 1fr 25%;
+    height: 55px;
     /* margin-top: 1rem; */
   }
 
-  nav h1 {
-    font-size: 22px;
+#jj {
+    font-size: 25px;
   }
 
   .hamburger {
