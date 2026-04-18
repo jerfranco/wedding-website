@@ -149,6 +149,7 @@ export function Admin() {
                   <p><strong>Name:</strong> {guest.name}</p>
                   <p><strong>Email:</strong> {guest.email}</p>
                   <p><strong>Party:</strong> {guest.party}</p>
+                  <p><strong>Allergies:</strong> {guest.allergies}</p>
                   <p><strong>Attending:</strong> {guest.attending ? "Yes" : "No"}</p>
                 </div>
                 <div className="actions">
