@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { supabase } from "./supabaseClient"
+import { ScrollToTop } from "./ScrollToTop";
 
 import { Home } from "./components/Home"
 import { RSVPForm } from "./components/RSVPform"
@@ -37,6 +38,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <header>
         <NavBar />
       </header>
