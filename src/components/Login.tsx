@@ -36,7 +36,8 @@ export function Login({ onLogin }: LoginProps) {
   }
 
   return (
-    <form onSubmit={handleLogin}>
+    <section id="loginSection">
+      <form onSubmit={handleLogin}>
       <input
         type="email"
         value={email}
@@ -56,5 +57,6 @@ export function Login({ onLogin }: LoginProps) {
       </button>
       {error && <p style={{ color: "red" }}>{error}</p>}
     </form>
+    </section>
   )
 }
