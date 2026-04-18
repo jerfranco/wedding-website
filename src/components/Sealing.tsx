@@ -3,7 +3,9 @@ export function Sealing() {
     <section id="sealingSection">
       <div id="sealingInfo">
         <h1 className="bellota-regular">Sealing Details</h1>
-        <p className="barlow-regular">You are invited to our sealing in the Oakland Temple at 10am!</p>
+        <p className="barlow-regular"><strong>You are invited to our sealing in the Oakland Temple at 10am!</strong>
+          <br /> 4770 Lincoln Ave Oakland, CA 94602
+        </p>
         <p className="barlow-regular">If you are able and willing to attend the sealing inside of the temple, 
           please <strong>show up early at 9:45am</strong> to wait in an area designated by temple workers.
         </p>
