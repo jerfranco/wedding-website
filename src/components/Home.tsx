@@ -15,8 +15,8 @@ export function Home() {
         <div id="homeImg">
           {/* <img src={image} /> */}
           <h2 className="bellota-regular">8 / 8 / 2026</h2>
-          <p className="barlow-regular">Sealing - Oakland</p>
-          <p className="barlow-regular">Reception - Brentwood </p>
+          <p className="barlow-regular">Sealing - Oakland, CA</p>
+          <p className="barlow-regular">Reception - Brentwood, CA</p>
         </div>
 
         <div id="homeContent">
@@ -41,7 +41,7 @@ export function Home() {
         <strong>Please RSVP by July 1st</strong> and get ready for some fun!
         </p>
         {/* <p>Please RSVP <a href="/rsvp">here</a> by July 1st</p> */}
-        <p id="salamat" className="great-vibes-regular">Maraming salamat!</p>
+        <p id="salamat" className="great-vibes-regular">Maraming salamat po!</p>
         <div id="miniHome">
           <img src={imageLeft} alt="Flower left side"></img>
           <img id="homeMiddlePic" src={image} alt="Holding hands"></img>

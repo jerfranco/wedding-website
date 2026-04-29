@@ -9,6 +9,16 @@ export function Faq() {
 
   const faqs = [
     {
+      question: "How can we contact you?",
+      answer: (
+        <>
+          You can text us at:<br />
+          Jeremiah: <br />(925)-234-2419<br />
+          Janelle: <br />(360)-528-1903
+        </>
+      )
+    },
+    {
       question: "Where is the reception?",
       answer: (
         <a 
@@ -22,7 +32,7 @@ export function Faq() {
     },
     {
       question: "What's the wedding dress code?",
-      answer: "Sunday best!",
+      answer: "Sunday best! Attendees are NOT required to wear any specific color",
     },
     {
       question: "Is there parking available?",
