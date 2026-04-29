@@ -32,11 +32,11 @@ export function NavBar() {
             Home
           </NavLink>
         </li>
-        <li className="barlow-regular">
+        {/* <li className="barlow-regular">
           <NavLink to="/story" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Story
           </NavLink>
-        </li>
+        </li> */}
         <li className="barlow-regular">
           <NavLink to="/photos" className={({ isActive }) => isActive ? "active" : ""} onClick={() => setMenuOpen(false)}>
             Gallery

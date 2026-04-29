@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const images = [
-  { src: "/propose.webp", position: "center 50%" },
-  { src: "/kneel.webp", position: "center 40%" },
-  { src: "/show_ring.webp", position: "center 35%" },
+  // { src: "/propose.webp", position: "center 50%" },
+  // { src: "/kneel.webp", position: "center 40%" },
+  // { src: "/show_ring.webp", position: "center 35%" },
   { src: "/home_image_jj.webp"},
   { src: "/home_image_mini.webp", position: "center 40%" },
   { src: "/faq_image.webp", position: "center 40%" },
@@ -11,7 +11,8 @@ const images = [
   { src: "/view.webp"},
   { src: "/hand.webp", position: "center 30%"},
   { src: "/walking.webp"},
-  { src: "/look.webp", position: "center 35%"}
+  { src: "/look.webp", position: "center 35%"},
+  { src: "/overlook.webp", position: "center bottom"}
 ];
 
 export function Photos() {
@@ -20,7 +21,8 @@ export function Photos() {
   return (
     <section id="photosSection">
       <h1 className="bellota-regular">Photos</h1>
-
+      <h2 className="barlow-regular">Click photos for full view</h2>
+      <h3 className="barlow-regular">Photographer: <a href="https://www.instagram.com/katelyu_photo/" target="_blank">@katelyu_photo</a></h3>
       {images.map((img, index) => (
         <img
           key={index}
