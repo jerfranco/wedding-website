@@ -21,13 +21,18 @@ export function Faq() {
     {
       question: "Where is the reception?",
       answer: (
-        <a 
+        <>
+          <a 
           href="https://www.google.com/maps?q=2350+Jeffery+Way+Brentwood+CA+94513"
           target="_blank"
           rel="noopener noreferrer"
-        >
-          2350 Jeffery Way Brentwood, CA 94513
-        </a>
+          >
+            2350 Jeffery Way Brentwood, CA 94513
+          </a><br/>
+          Please enter into the North Entrance!
+        </>
+        
+        
       )
     },
     {
