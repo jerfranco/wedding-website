@@ -6,6 +6,7 @@ interface Guest {
   id: number
   name: string
   email: string
+  phone_number: string
   attending: boolean
   allergies: string
   party?: number
@@ -114,6 +115,7 @@ export function Admin() {
               <tr>
                 <th>Name</th>
                 <th>Email</th>
+                <th>Phone Number</th>
                 <th>Party</th>
                 <th>Allergies</th>
                 <th>Attending</th>
@@ -125,6 +127,7 @@ export function Admin() {
                 <tr key={guest.id}>
                   <td>{guest.name}</td>
                   <td>{guest.email}</td>
+                  <td>{guest.phone_number}</td>
                   <td>{guest.party}</td>
                   <td>{guest.allergies}</td>
                   <td>{guest.attending ? "Yes" : "No"}</td>
@@ -148,6 +151,7 @@ export function Admin() {
                 <div id="rsvpDetails">
                   <p><strong>Name:</strong> {guest.name}</p>
                   <p><strong>Email:</strong> {guest.email}</p>
+                  <p><strong>Phone Number:</strong> {guest.phone_number}</p>
                   <p><strong>Party:</strong> {guest.party}</p>
                   <p><strong>Allergies:</strong> {guest.allergies}</p>
                   <p><strong>Attending:</strong> {guest.attending ? "Yes" : "No"}</p>

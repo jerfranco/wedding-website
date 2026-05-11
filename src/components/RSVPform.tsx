@@ -7,7 +7,8 @@ import { useLocation } from "react-router-dom"
 export function RSVPForm() {
   const [name, setName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
-  const [party, setParty] = useState<string>("");
+  const [phone_number, setNumber] = useState<string>("")
+  const [party, setParty] = useState<string>("")
   const [allergies, setAllergies] = useState<string>("")
   const [attending, setAttending] = useState<boolean>(true)
   const [loading, setLoading] = useState<boolean>(false)
@@ -24,7 +25,7 @@ export function RSVPForm() {
 
     const { error } = await supabase
       .from("guests")
-      .insert([{ name, attending, email, party, allergies}])
+      .insert([{ name, attending, email, phone_number, party, allergies}])
 
     if (error) {
       console.error("Error submitting RSVP:", error)
@@ -37,6 +38,7 @@ export function RSVPForm() {
     setAttending(false)
     setLoading(false)
     setEmail("")
+    setNumber("")
     setParty("")
     setAllergies("")
 
@@ -68,6 +70,14 @@ export function RSVPForm() {
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Your email"
+              required
+            />
+            <input
+              className="barlow-regular"
+              type="tel"
+              value={phone_number}
+              onChange={(e) => setNumber(e.target.value)}
+              placeholder="Your phone number"
               required
             />
             {/* <label htmlFor="phone">Phone Number:</label> */}
