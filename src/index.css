@@ -1198,11 +1198,15 @@ button {
     display: block;
     background: none;
     border: none;
-    font-size: 1.5rem;
+    font-size: 20px;
     cursor: pointer;
-    width: 50%;
     background-color: transparent;
     color: black;
+    background-color: #95c0d1;
+    width: 75%;
+    padding: 0.5rem 0;
+    border-radius: 10px;
+    margin-left: 1rem;
   }
 
   nav ul {

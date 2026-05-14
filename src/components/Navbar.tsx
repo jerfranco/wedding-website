@@ -19,11 +19,11 @@ export function NavBar() {
     <nav className={scrolled ? "scrolled" : ""}>
       
       <button
-        className="hamburger"
+        className="hamburger barlow-regular"
         onClick={() => setMenuOpen(!menuOpen)}
         aria-label="Toggle menu"
       >
-        ☰
+        Menu
       </button>
 
       <ul className={menuOpen ? "open" : ""}>
