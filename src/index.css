@@ -1060,7 +1060,47 @@ button {
 
 
 
+@media screen and (max-width: 1024px) {
+  #home {
+    display: flex;
+    flex-direction: column;
+    /* height: calc(100vh - 66.5px); */
+    height: 100vh;
+    justify-content: center;
+    background-position: center ;
+  }
 
+  #home div {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0;
+    margin: 0;
+  }
+
+  #homeImg {
+    padding: 0;
+    text-align: center;
+  }
+
+  #home h2 {
+    font-size: 40px;
+    height: 60px;
+    margin-top: 2rem;
+  }
+
+  #janelle {
+    padding: 0;
+  }
+
+  #jeremiah {
+    padding: 0;
+  }
+
+  #registryLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
 
 @media screen and (min-width: 1000px) {
   #forms {
@@ -1068,6 +1108,7 @@ button {
     margin-left: auto;
     margin-right: auto;
   }
+
 }
 
 #mobileCards {
@@ -1076,7 +1117,7 @@ button {
 
 
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   table {
     display: none;
   }
@@ -1374,6 +1415,7 @@ button {
   
   #registryLinks {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     height: auto;
     padding-bottom: 4rem;
