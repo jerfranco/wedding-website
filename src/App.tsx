@@ -2,6 +2,7 @@ import { useState, useEffect } from "react"
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom"
 import { supabase } from "./supabaseClient"
 import { ScrollToTop } from "./ScrollToTop";
+import { useAnalytics } from "./useAnalytics";
 
 import { Home } from "./components/Home"
 import { RSVPForm } from "./components/RSVPform"
@@ -16,6 +17,11 @@ import { Photos } from "./components/Photos"
 import './index.css';
 
 const ALLOWED_EMAILS = import.meta.env.VITE_ADMIN_EMAILS.split(",")
+
+function AnalyticsWrapper() {
+  useAnalytics();
+  return null;
+}
 
 function App() {
   const [user, setUser] = useState<any>(null)
@@ -38,6 +44,7 @@ function App() {
 
   return (
     <Router>
+      <AnalyticsWrapper />
       <ScrollToTop />
       <header>
         <NavBar />
