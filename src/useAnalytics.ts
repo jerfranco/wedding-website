@@ -6,11 +6,13 @@ export function useAnalytics(): void {
 
   useEffect(() => {
     if ((window as any).gtag) {
-      (window as any).gtag("event", "page_view", {
-        page_path: location.pathname,
-        page_location: window.location.href,
-        page_title: document.title,
-      });
+      setTimeout(() => {
+        (window as any).gtag("event", "page_view", {
+          page_path: location.pathname,
+          page_location: window.location.href,
+          page_title: document.title,
+        });
+      }, 100);
     }
-  }, [location.pathname]); // depend on pathname specifically
+  }, [location.pathname]);
 }
