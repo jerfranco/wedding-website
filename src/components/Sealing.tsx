@@ -1,4 +1,7 @@
+import { useEffect } from "react";
+
 export function Sealing() {
+  useEffect(() => { document.title = "Home | Janelle & Jeremiah"; }, []);
   return (
     <section id="sealingSection">
       <div id="sealingInfo">

@@ -2,8 +2,10 @@ import { useLocation } from "react-router-dom"
 import image from '/home_image_mini.webp'
 import imageRight from '/flower_right.webp'
 import imageLeft from '/flower_left.webp'
+import { useEffect } from "react"
 
 export function Home() {
+  useEffect(() => { document.title = "Home | Janelle & Jeremiah"; }, []);
 
   const location = useLocation()
 

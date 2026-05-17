@@ -2,9 +2,11 @@ import { useState } from "react"
 import { supabase } from "../supabaseClient"
 import { useNavigate } from "react-router-dom"
 import { useLocation } from "react-router-dom"
+import { useEffect } from "react"
 // import image from '/home_image.webp';
 
 export function RSVPForm() {
+  useEffect(() => { document.title = "RSVP | Janelle & Jeremiah"; }, []);
   const [name, setName] = useState<string>("")
   const [email, setEmail] = useState<string>("")
   const [phone_number, setNumber] = useState<string>("")

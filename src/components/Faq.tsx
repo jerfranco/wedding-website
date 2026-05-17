@@ -1,6 +1,8 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 export function Faq() {
+  useEffect(() => { document.title = "FAQ | Janelle & Jeremiah"; }, []);
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {

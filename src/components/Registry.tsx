@@ -1,8 +1,10 @@
 import amazon from '/amazon_logo.webp'
 import venmo from '/venmo.jpg';
 import image from '/faq_image.webp'
+import { useEffect } from 'react';
 
 export function Registry() {
+  useEffect(() => { document.title = "Registry | Janelle & Jeremiah"; }, []);
   return (
     <div id="registry">
       <div id="registryInfo">

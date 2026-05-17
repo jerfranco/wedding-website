@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useEffect } from "react";
 
 const images = [
   // { src: "/propose.webp", position: "center 50%" },
@@ -17,6 +18,7 @@ const images = [
 
 export function Photos() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  useEffect(() => { document.title = "Photos | Janelle & Jeremiah"; }, []);
 
   return (
     <section id="photosSection">
