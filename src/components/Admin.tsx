@@ -10,6 +10,7 @@ interface Guest {
   attending: boolean
   allergies: string
   party?: number
+  created_at?: string
 }
 
 export function Admin() {
@@ -21,12 +22,17 @@ export function Admin() {
   const [totalGuests, setTotalGuests] = useState(0)
   const [attendingCount, setAttendingCount] = useState(0)
 
+  const [sortBy, setSortBy] = useState("name")
+
   const navigate = useNavigate()
 
   useEffect(() => {
     const fetchGuests = async () => {
       setLoading(true)
-      const { data, error } = await supabase.from("guests").select("*")
+
+      const { data, error } = await supabase
+        .from("guests")
+        .select("*")
 
       if (error) {
         setError(error.message)
@@ -56,23 +62,56 @@ export function Admin() {
 
   useEffect(() => {
     setTotalRSVPs(guests.length)
-  
+
     const totalPeople = guests.reduce(
       (sum, g) => sum + Number(g.party || 1),
       0
     )
-  
+
     const attendingPeople = guests
       .filter((g) => g.attending)
       .reduce((sum, g) => sum + Number(g.party || 1), 0)
-  
+
     setTotalGuests(totalPeople)
     setAttendingCount(attendingPeople)
   }, [guests])
 
+  const sortedGuests = [...guests].sort((a, b) => {
+    switch (sortBy) {
+      case "name":
+        return a.name.localeCompare(b.name)
+
+      case "party":
+        return (b.party || 1) - (a.party || 1)
+
+      case "allergies":
+        return Number(Boolean(b.allergies?.trim())) -
+          Number(Boolean(a.allergies?.trim()))
+
+      case "newest":
+        if (a.created_at && b.created_at) {
+          return (
+            new Date(b.created_at).getTime() -
+            new Date(a.created_at).getTime()
+          )
+        }
+
+        return b.id - a.id
+
+      default:
+        return 0
+    }
+  })
+
   const handleDelete = async (id: number) => {
-    await supabase.from("guests").delete().eq("id", id)
-    setGuests((prev) => prev.filter((g) => g.id !== id))
+    await supabase
+      .from("guests")
+      .delete()
+      .eq("id", id)
+
+    setGuests((prev) =>
+      prev.filter((g) => g.id !== id)
+    )
   }
 
   const handleToggleAttending = async (guest: Guest) => {
@@ -81,15 +120,13 @@ export function Admin() {
       .update({ attending: !guest.attending })
       .eq("id", guest.id)
 
-    const updatedGuests = guests.map((g) =>
-      g.id === guest.id ? { ...g, attending: !g.attending } : g
+    setGuests((prev) =>
+      prev.map((g) =>
+        g.id === guest.id
+          ? { ...g, attending: !g.attending }
+          : g
+      )
     )
-
-    const sorted = [...updatedGuests].sort((a, b) => {
-      return Number(b.attending) - Number(a.attending)
-    })
-
-    setGuests(sorted)
   }
 
   return (
@@ -103,13 +140,26 @@ export function Admin() {
         <p><strong>Not Attending:</strong> {totalGuests - attendingCount}</p>
       </div>
 
+      <div style={{ marginBottom: "1rem" }}>
+        <label>Sort By: </label>
+
+        <select
+          value={sortBy}
+          onChange={(e) => setSortBy(e.target.value)}
+        >
+          <option value="name">Name (A-Z)</option>
+          <option value="newest">Recently Added</option>
+          <option value="party">Largest Party</option>
+          <option value="allergies">Has Allergies</option>
+        </select>
+      </div>
+
       {loading ? (
         <p>Loading...</p>
       ) : error ? (
         <p style={{ color: "red" }}>{error}</p>
       ) : (
         <>
-          {/* Desktop Table */}
           <table>
             <thead>
               <tr>
@@ -122,8 +172,9 @@ export function Admin() {
                 <th>Actions</th>
               </tr>
             </thead>
+
             <tbody>
-              {guests.map((guest) => (
+              {sortedGuests.map((guest) => (
                 <tr key={guest.id}>
                   <td>{guest.name}</td>
                   <td>{guest.email}</td>
@@ -131,11 +182,23 @@ export function Admin() {
                   <td>{guest.party}</td>
                   <td>{guest.allergies}</td>
                   <td>{guest.attending ? "Yes" : "No"}</td>
+
                   <td>
-                    <button id="round" onClick={() => handleToggleAttending(guest)}>
+                    <button
+                      id="round"
+                      onClick={() =>
+                        handleToggleAttending(guest)
+                      }
+                    >
                       Toggle
                     </button>
-                    <button id="red" onClick={() => handleDelete(guest.id)}>
+
+                    <button
+                      id="red"
+                      onClick={() =>
+                        handleDelete(guest.id)
+                      }
+                    >
                       Delete
                     </button>
                   </td>
@@ -144,37 +207,64 @@ export function Admin() {
             </tbody>
           </table>
 
-          {/* Mobile Cards */}
           <div id="mobileCards">
-            {guests.map((guest) => (
-              <div key={guest.id} className="guest-card">
+            {sortedGuests.map((guest) => (
+              <div
+                key={guest.id}
+                className="guest-card"
+              >
                 <div id="rsvpDetails">
                   <p><strong>Name:</strong> {guest.name}</p>
                   <p><strong>Email:</strong> {guest.email}</p>
-                  <p><strong>Phone Number:</strong> {guest.phone_number}</p>
+                  <p><strong>Phone:</strong> {guest.phone_number}</p>
                   <p><strong>Party:</strong> {guest.party}</p>
                   <p><strong>Allergies:</strong> {guest.allergies}</p>
-                  <p><strong>Attending:</strong> {guest.attending ? "Yes" : "No"}</p>
+                  <p>
+                    <strong>Attending:</strong>{" "}
+                    {guest.attending ? "Yes" : "No"}
+                  </p>
                 </div>
+
                 <div className="actions">
-                  <button id="round" onClick={() => handleToggleAttending(guest)}>
+                  <button
+                    id="round"
+                    onClick={() =>
+                      handleToggleAttending(guest)
+                    }
+                  >
                     Toggle
                   </button>
-                  <button id="red" onClick={() => handleDelete(guest.id)}>
+
+                  <button
+                    id="red"
+                    onClick={() =>
+                      handleDelete(guest.id)
+                    }
+                  >
                     Delete
                   </button>
                 </div>
               </div>
             ))}
           </div>
-    </>
-  )}
-      
+        </>
+      )}
+
       <div id="adminButtons">
-        <button id="round" onClick={() => supabase.auth.signOut()}>Log Out</button>
-        <button id="red" onClick={() => navigate("/")}>Home Page</button>
+        <button
+          id="round"
+          onClick={() => supabase.auth.signOut()}
+        >
+          Log Out
+        </button>
+
+        <button
+          id="red"
+          onClick={() => navigate("/")}
+        >
+          Home Page
+        </button>
       </div>
-      
     </div>
   )
 }
