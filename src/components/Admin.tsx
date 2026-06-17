@@ -22,7 +22,7 @@ export function Admin() {
   const [totalGuests, setTotalGuests] = useState(0)
   const [attendingCount, setAttendingCount] = useState(0)
 
-  const [sortBy, setSortBy] = useState("name")
+  const [sortBy, setSortBy] = useState("newest")
 
   const navigate = useNavigate()
 
