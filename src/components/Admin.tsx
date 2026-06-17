@@ -147,8 +147,8 @@ export function Admin() {
           value={sortBy}
           onChange={(e) => setSortBy(e.target.value)}
         >
-          <option value="name">Name (A-Z)</option>
           <option value="newest">Recently Added</option>
+          <option value="name">Name (A-Z)</option>
           <option value="party">Largest Party</option>
           <option value="allergies">Has Allergies</option>
         </select>
